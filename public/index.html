@@ -98,18 +98,18 @@
 
         @media (max-width: 768px) {
             .logo {
-                position: static;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
                 width: 100px;
-                margin: 0 auto 20px;
-                display: block;
             }
 
             .github-icon {
-                position: static;
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
                 width: 28px;
                 height: 28px;
-                margin: 20px auto;
-                display: block;
             }
         }
 
@@ -197,7 +197,7 @@
 
         }
 
-        button {
+        .number-pad button {
             padding: 12px;
             font-size: 22px;
             border: 1px solid #e0e0e0;
@@ -207,9 +207,18 @@
             cursor: pointer;
             font-family: 'Oswald', sans-serif;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
-        button:active {
+        .number-pad button:disabled {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .number-pad button:not(:disabled):active {
             background: #e0e0e0;
             transform: scale(0.98);
         }
@@ -306,9 +315,15 @@
         }
 
         function submitAnswer(answer) {
+            const buttons = document.querySelectorAll('.number-pad button');
+            buttons.forEach(button => button.disabled = true);
+            
             currentPlate++;
             if (currentPlate < totalPlates) {
                 showPlate();
+                setTimeout(() => {
+                    buttons.forEach(button => button.disabled = false);
+                }, 2000);
             } else {
                 showResults();
             }
