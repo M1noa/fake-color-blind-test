@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online color blindness test. Check your color vision with our professional Ishihara-style test plates.">
+    <meta name="keywords" content="color blind test, color vision test, ishihara test, color blindness, deuteranopia, protanopia, tritanopia, color vision deficiency, eye test, vision screening">
+    <meta name="robots" content="index, follow">
+    <title>EnComa® Free Color Blind Test | Test Your Color Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@100..900&display=swap" rel="stylesheet">
+    <div style="display: none" aria-hidden="true">
+        <h1>Free Online Color Blindness Test</h1>
+        <h2>Professional Color Vision Screening</h2>
+        <h3>Ishihara Style Color Test</h3>
+        <h4>Check Your Color Vision Today</h4>
+        <p>Test for deuteranopia, protanopia, tritanopia and other color vision deficiencies</p>
+        Enchroma Color Blind Test
+        Fake Color Blind Test
+    </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+            color: #333;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: auto;
+            z-index: 100;
+        }
+
+        .github-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            z-index: 100;
+            transition: opacity 0.3s ease;
+        }
+
+        .github-icon:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                position: static;
+                width: 100px;
+                margin: 0 auto 20px;
+                display: block;
+            }
+
+            .github-icon {
+                position: static;
+                width: 28px;
+                height: 28px;
+                margin: 20px auto;
+                display: block;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            gap: 80px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        .number-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 360px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        .test-content {
+            flex: 1;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .question-counter {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .progress {
+            width: 100%;
+            max-width: 500px;
+            height: 6px;
+            background: #f0f0f0;
+            margin: 0 auto 15px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .test-plate {
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 1;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .test-plate img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .number-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 360px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 12px;
+
+        }
+
+        button {
+            padding: 12px;
+            font-size: 22px;
+            border: 1px solid #e0e0e0;
+            background: #f8f8f8;
+            color: #333;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button:active {
+            background: #e0e0e0;
+            transform: scale(0.98);
+        }
+
+        #nothing {
+            grid-column: span 3;
+            background: #f0f0f0;
+            font-weight: 500;
+        }
+
+        .progress {
+            width: 100%;
+            max-width: 500px;
+            height: 6px;
+            background: #f0f0f0;
+            margin: 20px auto;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #666;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/M1noa/fake-color-blind-test" target="_blank" class="github-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+    </a>
+    <a href="https://bio.minoa.cat" target="_blank"><img src="encoma-same.png" alt="Logo" class="logo"></a>
+    <div class="container">
+        <div class="test-content">
+            <div class="question-counter" id="questionCounter">Question 1 of 6</div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="test-plate" id="testPlate"></div>
+        </div>
+
+        <div class="number-pad">
+            <button onclick="submitAnswer(1)">1</button>
+            <button onclick="submitAnswer(2)">2</button>
+            <button onclick="submitAnswer(3)">3</button>
+            <button onclick="submitAnswer(4)">4</button>
+            <button onclick="submitAnswer(5)">5</button>
+            <button onclick="submitAnswer(6)">6</button>
+            <button onclick="submitAnswer(7)">7</button>
+            <button onclick="submitAnswer(8)">8</button>
+            <button onclick="submitAnswer(9)">9</button>
+            <button id="nothing" onclick="submitAnswer('nothing')">Nothing</button>
+        </div>
+    </div>
+
+    <script>
+        const images = ['img1.png', 'img3.png'];
+        let lastHue = -1;
+
+        function generateDistinctHue() {
+            let newHue;
+            do {
+                newHue = Math.floor(Math.random() * 360);
+            } while (lastHue !== -1 && Math.abs(newHue - lastHue) < 60);
+            lastHue = newHue;
+            return newHue;
+        }
+
+        function generateTransforms() {
+            const hue = generateDistinctHue();
+            const saturation = Math.floor(Math.random() * 60) + 80; // 80-140%
+            const rotation = Math.floor(Math.random() * 360);
+            return `hue-rotate(${hue}deg) saturate(${saturation}%); transform: rotate(${rotation}deg)`;
+        }
+
+        let currentPlate = 0;
+        const totalPlates = Math.floor(Math.random() * 4) + 6; // Random number between 6 and 9
+
+        function showPlate() {
+            const testPlate = document.getElementById('testPlate');
+            const imageIndex = currentPlate % images.length;
+            const transforms = generateTransforms();
+            testPlate.innerHTML = `<img src="${images[imageIndex]}" style="filter: ${transforms}">`;
+            document.getElementById('questionCounter').textContent = `Question ${currentPlate + 1} of ${totalPlates}`;
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progress = ((currentPlate + 1) / totalPlates) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
+        }
+
+        function submitAnswer(answer) {
+            currentPlate++;
+            if (currentPlate < totalPlates) {
+                showPlate();
+            } else {
+                showResults();
+            }
+        }
+
+        const results = [
+            {
+                title: "Chromatic Resonance Disorder (The Musical Vision)",
+                description: "You show signs of Chromatic Resonance Disorder! This fascinating condition makes you perceive colors as musical notes. Red might sound like jazz, while green gives off more of a classical vibe. It's like having a built-in synesthesia soundtrack for your eyes!",
+                recommendations: [
+                    "Explore how different colors create unique sensory experiences",
+                    "Notice how your color-music associations change with lighting",
+                    "Consider consulting with a vision specialist for a comprehensive evaluation"
+                ]
+            },
+            {
+                title: "Quantum Color Perception Syndrome (QCPS)",
+                description: "Your results indicate Quantum Color Perception Syndrome! Your eyes seem to operate on a quantum level, meaning colors exist in multiple states simultaneously. Sometimes orange is orange, sometimes it's a blend of every color at once!",
+                recommendations: [
+                    "Explore the fascinating world of color theory",
+                    "Document your unique color experiences",
+                    "Schedule a professional color vision assessment for more insights"
+                ]
+            },
+            {
+                title: "You Might Have Deuteranopia (Red-Green Color Blindness)",
+                description: "Your results suggest deuteranopia - which means you might mix up reds and greens! It's like Christmas lights are playing tricks on you. This type of color vision occurs in about 5% of people.",
+                recommendations: [
+                    "Learn about color-coding strategies for daily life",
+                    "Explore apps and tools designed for deuteranopia",
+                    "Consider scheduling a comprehensive color vision assessment"
+                ]
+            },
+            {
+                title: "Looks Like Protanopia (Another Flavor of Red-Green)",
+                description: "Your results indicate protanopia! This means reds might look darker to you than they do to others. It's like having a unique way of seeing the world that others might not understand.",
+                recommendations: [
+                    "Discover your unique way of seeing the world",
+                    "Learn about helpful tools and technologies",
+                    "Consider a professional vision assessment for more detailed insights"
+                ]
+            },
+            {
+                title: "You Show Signs of Tritanopia (Blue-Yellow)",
+                description: "Your results indicate tritanopia - a distinctive type of color vision where blues and yellows create unique patterns! It's like seeing the world through a special lens that others don't have.",
+                recommendations: [
+                    "Explore how you uniquely perceive the sky and nature",
+                    "Learn about tools designed for tritanopia",
+                    "Consider a professional color vision evaluation"
+                ]
+            }
+        ];
+
+        function showResults() {
+            const container = document.querySelector('.container');
+            const result = results[Math.floor(Math.random() * results.length)];
+            
+            container.innerHTML = `
+                <a href="https://bio.minoa.cat" target="_blank"></a>
+                <div class="test-content" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 20px;">
+                    <h2 style="color: #333; font-size: 28px; margin-bottom: 20px; font-family: 'Big Shoulders Inline', cursive;">${result.title}</h2>
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <p style="color: #333; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">${result.description}</p>
+                        <p style="color: #333; font-size: 18px; margin-bottom: 20px; font-weight: 500;">Our recommendations:</p>
+                        <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                            ${result.recommendations.map(rec => `<li style="color: #333; font-size: 16px; margin: 12px 0; padding: 8px; background: #fff; border-radius: 8px;">• ${rec}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <p style="color: rgba(0,0,0,0.4); font-size: 12px; margin-top: 20px;">Disclaimer: This is a FAKE simulated color vision test created for entertainment & troll/prank purposes only. For accurate color vision assessment, please consult an eye care professional.</p>
+                    <button onclick="location.reload()" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #2196F3, #1976D2); color: white; border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); margin-top: 20px; font-family: 'Big Shoulders Inline', cursive;">Take Test Again</button>
+                </div>
+            `;
+        }
+
+        // Start the test
+        showPlate();
+    </script>
+</body>
+</html>
