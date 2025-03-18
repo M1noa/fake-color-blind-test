@@ -6,6 +6,15 @@
     <meta name="description" content="Free online color blindness test. Check your color vision with our professional Ishihara-style test plates.">
     <meta name="keywords" content="color blind test, color vision test, ishihara test, color blindness, deuteranopia, protanopia, tritanopia, color vision deficiency, eye test, vision screening">
     <meta name="robots" content="index, follow">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EnComa® Free Color Blind Test | Test Your Color Vision">
+    <meta name="twitter:description" content="Free online color blindness test. Check your color vision with our professional Ishihara-style test plates.">
+    <meta name="twitter:image" content="https://bio.minoa.cat/encoma-same.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EnComa® Free Color Blind Test | Test Your Color Vision">
+    <meta property="og:description" content="Free online color blindness test. Check your color vision with our professional Ishihara-style test plates.">
+    <meta property="og:image" content="https://bio.minoa.cat/encoma-same.png">
+    <meta property="og:url" content="https://bio.minoa.cat">
     <title>EnComa® Free Color Blind Test | Test Your Color Vision</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@100..900&display=swap" rel="stylesheet">
@@ -276,48 +285,23 @@
         const results = [
             {
                 title: "Chromatic Resonance Disorder (The Musical Vision)",
-                description: "You show signs of Chromatic Resonance Disorder! This fascinating condition makes you perceive colors as musical notes. Red might sound like jazz, while green gives off more of a classical vibe. It's like having a built-in synesthesia soundtrack for your eyes!",
-                recommendations: [
-                    "Explore how different colors create unique sensory experiences",
-                    "Notice how your color-music associations change with lighting",
-                    "Consider consulting with a vision specialist for a comprehensive evaluation"
-                ]
+                description: "You show signs of Chromatic Resonance Disorder! This fascinating condition makes you perceive colors as musical notes. Red might sound like jazz, while green gives off more of a classical vibe. It's like having a built-in synesthesia soundtrack for your eyes!"
             },
             {
                 title: "Quantum Color Perception Syndrome (QCPS)",
-                description: "Your results indicate Quantum Color Perception Syndrome! Your eyes seem to operate on a quantum level, meaning colors exist in multiple states simultaneously. Sometimes orange is orange, sometimes it's a blend of every color at once!",
-                recommendations: [
-                    "Explore the fascinating world of color theory",
-                    "Document your unique color experiences",
-                    "Schedule a professional color vision assessment for more insights"
-                ]
+                description: "Your results indicate Quantum Color Perception Syndrome! Your eyes seem to operate on a quantum level, meaning colors exist in multiple states simultaneously. Sometimes orange is orange, sometimes it's a blend of every color at once!"
             },
             {
                 title: "You Might Have Deuteranopia (Red-Green Color Blindness)",
-                description: "Your results suggest deuteranopia - which means you might mix up reds and greens! It's like Christmas lights are playing tricks on you. This type of color vision occurs in about 5% of people.",
-                recommendations: [
-                    "Learn about color-coding strategies for daily life",
-                    "Explore apps and tools designed for deuteranopia",
-                    "Consider scheduling a comprehensive color vision assessment"
-                ]
+                description: "Your results suggest deuteranopia - which means you might mix up reds and greens! It's like Christmas lights are playing tricks on you. This type of color vision occurs in about 5% of people."
             },
             {
                 title: "Looks Like Protanopia (Another Flavor of Red-Green)",
-                description: "Your results indicate protanopia! This means reds might look darker to you than they do to others. It's like having a unique way of seeing the world that others might not understand.",
-                recommendations: [
-                    "Discover your unique way of seeing the world",
-                    "Learn about helpful tools and technologies",
-                    "Consider a professional vision assessment for more detailed insights"
-                ]
+                description: "Your results indicate protanopia! This means reds might look darker to you than they do to others. It's like having a unique way of seeing the world that others might not understand."
             },
             {
                 title: "You Show Signs of Tritanopia (Blue-Yellow)",
-                description: "Your results indicate tritanopia - a distinctive type of color vision where blues and yellows create unique patterns! It's like seeing the world through a special lens that others don't have.",
-                recommendations: [
-                    "Explore how you uniquely perceive the sky and nature",
-                    "Learn about tools designed for tritanopia",
-                    "Consider a professional color vision evaluation"
-                ]
+                description: "Your results indicate tritanopia - a distinctive type of color vision where blues and yellows create unique patterns! It's like seeing the world through a special lens that others don't have."
             }
         ];
 
@@ -331,10 +315,6 @@
                     <h2 style="color: #333; font-size: 28px; margin-bottom: 20px; font-family: 'Big Shoulders Inline', cursive;">${result.title}</h2>
                     <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
                         <p style="color: #333; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">${result.description}</p>
-                        <p style="color: #333; font-size: 18px; margin-bottom: 20px; font-weight: 500;">Our recommendations:</p>
-                        <ul style="list-style: none; padding: 0; margin: 20px 0;">
-                            ${result.recommendations.map(rec => `<li style="color: #333; font-size: 16px; margin: 12px 0; padding: 8px; background: #fff; border-radius: 8px;">• ${rec}</li>`).join('')}
-                        </ul>
                     </div>
                     <p style="color: rgba(0,0,0,0.4); font-size: 12px; margin-top: 20px;">Disclaimer: This is a FAKE simulated color vision test created for entertainment & troll/prank purposes only. For accurate color vision assessment, please consult an eye care professional.</p>
                     <button onclick="location.reload()" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #2196F3, #1976D2); color: white; border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); margin-top: 20px; font-family: 'Big Shoulders Inline', cursive;">Take Test Again</button>
